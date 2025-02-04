@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Tree from '../types/Tree';
 import apiClient from '../services/apiClient';
 import { useNavigate } from 'react-router-dom';
+import TreesTable from '../components/TreesTable';
 const Trees = () => {
     const navigate = useNavigate();
     const [trees, setTrees] = useState<Tree[]>([] as Tree[]);
@@ -16,17 +17,8 @@ const Trees = () => {
     return (
         <div>
             <h1>Fák</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Név</th>
-                        <th>Ár</th>
-                        <th>Kategória</th>
-                        <th>Készlet</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {trees.map((tree) => (
+
+            {/* {trees.map((tree) => (
                         <tr
                             onClick={() => {
                                 navigate(`/tree/${tree.id}`);
@@ -37,9 +29,9 @@ const Trees = () => {
                             <td>{tree.kategoria.nev}</td>
                             <td>{tree.keszlet}</td>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    ))} */}
+            <TreesTable trees={trees} />
+
             <button onClick={() => navigate('/new-tree')}>Létrehozás</button>
         </div>
     );
