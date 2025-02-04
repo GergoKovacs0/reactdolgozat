@@ -1,0 +1,27 @@
+h1 {
+    text-align: center;
+}
+
+table, tr, th, td {
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+
+tr {
+    cursor: pointer;
+}
+
+th, td {
+    padding: 5px;
+}
+
+div.container {
+    display: flex;
+    flex-direction: column;
+}
+
+div.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

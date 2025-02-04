@@ -40,6 +40,7 @@ const Trees = () => {
                     ))}
                 </tbody>
             </table>
+            <button onClick={() => navigate('/new-tree')}>Létrehozás</button>
         </div>
     );
 };

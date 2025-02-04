@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import './index.css';
+
 import Trees from './pages/Trees';
 import TreePage from './pages/Tree';
 import NewTree from './pages/NewTree';
